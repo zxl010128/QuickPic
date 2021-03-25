@@ -1,30 +1,161 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Quickpic</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- You can add your styles and scripts here -->
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
-    <script type="module" src="src/helpers.js"></script>
-    <script type="module" src="src/api.js"></script>
-</head>
-<body>
-    <!-- This is an example app structure, you can modify this as much as you choose --> 
-    <header class="banner">
-        <h1>Quickpic</h1>
-        <ul class="nav">
-            <li class="nav-item">Item</li>
-            <li class="nav-item">Item</li>
-        </ul>
-    </header>
-    <main role="main">
-        <!-- app goes here --> 
-    </main>
-    <footer>
-        <p>&copy; Quickpic</p>
-    </footer>
-    <script type="module" src="src/main.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quickpic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- You can add your styles and scripts here -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+        <script type="module" src="src/helpers.js"></script>
+        <script type="module" src="src/api.js"></script>
+
+    </head>
+        
+    <body>
+        <!-- This is an example app structure, you can modify this as much as you choose --> 
+        <header class="banner">
+            <h1>Quickpic</h1>
+
+            <!-- Author Info --> 
+            <div class="author" id="authorInfo">
+                <p><b>Author:</b> Xinlei Zhang</p>
+                <p><b>zID:</b> z5237609</p>
+            </div>
+
+            <!-- A new sidebar to control the whole screen --> 
+            <button type="button" id="sidebarButton" >
+                <span class="sideBar">&Xi; Toggle Sidebar</span>
+            </button>
+        </header>
+        
+        <main role="main">
+
+            <!-- Popup Window Design -->
+            <div class="opacityWindow" id="popupWindow">
+
+                <div id="popupContent">
+                    <span id="close">&times;</span>
+                    <p id="alert">Something Here</p>
+
+                    <div id="addFriend">
+                        <input type="text" id="popupInput"/>
+                        <button id="popupConfirm">Confirm</button>
+                    </div>
+                    
+                </div>
+            
+            </div>
+
+            <!-- Sidebar Design -->
+            <div class="opacityWindow" id="sidebarWindow">
+
+                <div id="sidebarContent">
+                    <div class="icon">
+                        <span id="closeSidebar">&times;</span>
+                        <p>QuickPic</p>
+                        <p>Sidebar</p>
+                    </div>
+                    
+                    <div class="sidebarModule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 -10 20 25">
+                            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                        </svg>
+                        <span>My Profile</span>
+                    </div>
+
+                    <div class="sidebarModule" id="searchFriend">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 -10 20 25">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <span>Search Friend</span>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- Log In Screen here --> 
+            <div id="loginScreen">
+
+                <h2 class="title">Welcome to Quickpic! Please login!</h2>
+                
+                <table id="loginInput">   
+                    <tr>
+                        <td>
+                            <label>Username</label>
+                        </td>
+                        <td>
+                            <input type="text" id="username" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="password" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password Confirm</label>
+                        </td>
+                        <td>
+                            <input type="password" id="passwordconfirm" />
+                        </td>
+                    </tr>
+                </table>
+
+                <button id="loginButton">Log in</button>
+                <button id="signupButton">Sign Up</button>
+
+            </div>
+
+            <!-- Sign Up Screen here --> 
+            <div id="signupScreen">
+                
+                <div class="signupInput">
+                    <h2>Create Quickpic Account</h2>
+                    <p>Username</p><br />
+                    <input type="text" id="username-signup" /><br />
+                    <p>Password</p><br />
+                    <input type="password" id="password-signup" /><br />
+                    <p>Password Confirm</p><br />
+                    <input type="password" id="passwordconfirm-signup" /><br />
+                    <p>Email Address</p><br />
+                    <input type="text" id="email-signup" /><br />
+                    <p>Name</p><br />
+                    <input type="text" id="name-signup" /><br />
+                </div>
+
+                <button id="createAccount">Create Account</button>
+                <p>Already have an account? <button id="underlineSignIn">Sign in</button></p>
+            </div>
+
+            <!-- Feed Screen here --> 
+            <div id="feedScreen">
+                
+                <div id="NoFeed">
+                    <p><b>No Feed Currently</b></p>
+                    <p>You did not follow anyone.</p>
+                    <p>or</p>
+                    <p>Your friends did not have any posts.</p>
+                    <p>Please click sidebar to start your journey &#128521;</p>
+                </div>
+
+                <div id="LoadFeed">
+                    <div id="LoadFeedContainer"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; Quickpic</p>
+        </footer>
+        <script type="module" src="src/main.js"></script>
+        <script type="text/javascript" src="src/user.js"></script>
+        <script type="text/javascript" src="src/authentication.js"></script>
+        <script type="text/javascript" src="src/sidebar.js"></script>
+    </body>
 </html>
