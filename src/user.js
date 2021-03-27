@@ -584,7 +584,6 @@ function profileCreate(userInfo, user) {
                             outer.setAttribute('id', 'commentOuter');
 
                             const close = document.createElement('span');
-                            close.innerText = '&times;';
                             close.insertAdjacentHTML("afterbegin", '&times;');
                             close.setAttribute('id', 'closeComment');
 
