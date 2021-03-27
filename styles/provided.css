@@ -1,10 +1,11 @@
 
 /* base styles, feel free to edit */
 html, body {
+    overflow: scroll;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #fafafa;
-    height: 100%;
     font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -272,11 +273,17 @@ button{
 
 #feedScreen {
     display: none;
+    overflow: scroll;
     width: 100%;
     height: 80%;
 }
 
 #NoFeed {
+    display: none;
+    text-align: center;
+}
+
+#FeedCheck {
     display: none;
     text-align: center;
 }
@@ -332,7 +339,8 @@ button{
 }
 
 .cardAuthor:hover {
-    color: blueviolet;
+    opacity: 0.8;
+    color: rgb(255, 137, 2);
 }
 
 .cardTime {
@@ -474,7 +482,7 @@ button{
 }
 
 .boxName:hover {
-    opacity: 0.6;
+    opacity: 0.9;
     color: rgb(255, 94, 0);
 }
 
@@ -484,11 +492,231 @@ button{
     margin-bottom: 20px;
     min-height: 60px;
     width: 100%;
-    border: solid 2px blueviolet;
+    border: solid 1px blueviolet;
 }
 
 .commentContent {
     line-height: 25px;
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 10px 10px 0px 20px;
+}
+
+/* Profile Screen */
+
+#profileScreen {
+    display: none;
+    min-height: 60px;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+
+#closeProfile {
+    float: right;
+    padding: 0 10px 0 10px;
+    color: #8d8d8d;
+    font-size: 40px;
+}
+
+#closeProfile:hover {
+    color: #000;
+}
+
+.FollowContainer {
+    border-radius: 10px;
+    width: 95%;
+    min-height: 60px;
+    border: solid 2px blue;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.userIcon {
+    padding-left: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.profileBorder {
+    line-height: 10px;
+    border-radius: 10px;
+    border: solid 3px rgb(255, 137, 2);
+    margin: 20px auto;
+    min-height: 60px;
+    width: 280px;
+    text-align: left;
+    padding: 0 20px 0 20px;
+}
+
+.FeedContainer {
+    text-align: left;
+    border-radius: 10px;
+    width: 95%;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+    border: solid 2px green;
+    margin: 0 auto;
+}
+
+.profileButton {
+    margin: 0;
+    width: 130px;
+    border: 2px solid darkcyan;
+    color: darkcyan;
+}
+
+.profileButton:hover {
+    background-color: darkcyan;
+    opacity: 0.6;
+    color: black;
+}
+
+/* update Window */
+
+#updateScreen {
+    display: block;
+    padding-top: 100px;
+}
+
+#closeUpdate {
+    color: #8d8d8d;
+    float: right;
+    font-size: 30px;
+}
+
+#closeUpdate:hover {
+    color: #000;
+}
+
+#updateScreen p {
+    font-size: 20px;
+}
+
+#updateScreen input {
+    width: 250px;
+    height: 30px;
+}
+
+#updateScreen button {
+    display: block;
+    margin-top: 30px;
+    border: 2px solid rgb(255, 137, 2);
+    color: rgb(255, 137, 2);
+}
+
+#updateScreen button:hover {
+    background-color: rgb(255, 137, 2);
+    color: black;
+    opacity: 0.6;
+}
+
+/* Comment Window */
+
+#updateComment {
+    display: block;
+    padding-top: 100px;
+    
+}
+
+#commentOuter {
+    height: 70%;
+    text-align: center;
+}
+
+#closeComment {
+    color: #8d8d8d;
+    float: right;
+    font-size: 30px;
+}
+
+#closeComment:hover {
+    color: #000;
+}
+
+#updateComment p {
+    line-height: 60px;
+    font-size: 40px;
+}
+
+#updateComment input {
+    border: 2px solid skyblue;
+    width: 90%;
+    height: 200px;
+}
+
+#updateComment button {
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    border: 2px solid rgb(255, 137, 2);
+    color: rgb(255, 137, 2);
+}
+
+#updateComment button:hover {
+    background-color: rgb(255, 137, 2);
+    color: black;
+    opacity: 0.6;
+}
+
+/* Comment Window */
+
+#newPost {
+    display: block;
+    padding-top: 100px;
+}
+
+#closenewPost {
+    color: #8d8d8d;
+    float: right;
+    font-size: 30px;
+}
+
+#closenewPost:hover {
+    color: #000;
+}
+
+#newPost h1 {
+    font-size: 40px;
+    padding: 20px 0 0 20px;
+}
+
+#newPost p {
+    padding: 10px 0 0 20px;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+#newPost input {
+    margin: 0 0 0 20px;
+    border: 2px solid skyblue;
+    width: 90%;
+    height: 70px;
+}
+
+#newPost input[type='file'] {
+    width: 70%;
+    font-size: 15px;
+    border: none;
+}
+
+#newPost button {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    border: 2px solid rgb(255, 137, 2);
+    color: rgb(255, 137, 2);
+}
+
+#newPost button:hover {
+    background-color: rgb(255, 137, 2);
+    color: black;
+    opacity: 0.6;
 }

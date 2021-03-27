@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- You can add your styles and scripts here -->
         <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
-        <script type="module" src="src/helpers.js"></script>
+        <script type="text/javascript" src="src/helpers.js"></script>
         <script type="module" src="src/api.js"></script>
 
     </head>
@@ -57,11 +57,18 @@
                         <p>Sidebar</p>
                     </div>
                     
-                    <div class="sidebarModule">
+                    <div class="sidebarModule" id='myProfile'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 -10 20 25">
                             <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
                         </svg>
                         <span>My Profile</span>
+                    </div>
+
+                    <div class="sidebarModule" id="NewPost">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-post-fill" viewBox="0 -10 20 25">
+                            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-5-.5H7a.5.5 0 0 1 0 1H4.5a.5.5 0 0 1 0-1zm0 3h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        <span>New Post</span>
                     </div>
 
                     <div class="sidebarModule" id="searchFriend">
@@ -70,6 +77,27 @@
                         </svg>
                         <span>Search Friend</span>
                     </div>
+
+                    <div class="sidebarModule" id="unfollowFriend">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-eye-slash" viewBox="0 -10 20 25">
+                            <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                            <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299l.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                            <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884l-12-12 .708-.708 12 12-.708.708z"/>
+                        </svg>
+                        <span>Unfollow Friend</span>
+                    </div>
+
+                    <div class="sidebarModule" id="LogOut">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bullseye" viewBox="0 -10 20 25">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+                            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+                            <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        <span>Log Out</span>
+                    </div>
+
+                    
                 </div>
             
             </div>
@@ -146,14 +174,23 @@
                 <div id="LoadFeed">
                     <div id="LoadFeedContainer"></div>
                 </div>
+
+                <div id="FeedCheck">
+                    <p><b>No New Feed Currently</b></p>
+                    <p>Your have reached the end.</p>
+                    <p>Please click sidebar to start your journey &#128521;</p>
+                </div>
             </div>
+
+            <div id="profileScreen"></div>
 
         </main>
 
         <footer>
             <p>&copy; Quickpic</p>
         </footer>
-        <script type="module" src="src/main.js"></script>
+        <!-- <script type="module" src="src/main.js"></script> -->
+        <script type="text/javascript" src="src/post.js"></script>
         <script type="text/javascript" src="src/user.js"></script>
         <script type="text/javascript" src="src/authentication.js"></script>
         <script type="text/javascript" src="src/sidebar.js"></script>
