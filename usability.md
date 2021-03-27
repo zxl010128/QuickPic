@@ -15,4 +15,4 @@
 
 8. A toggle button for each postcard(to access the user like and comment).
 
-9. clear UI helps user to use easily.
+9. clear UI helps user to use easily.(Vlab has a slight difference with local chrome in design(like emoji))

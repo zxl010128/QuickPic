@@ -3,4 +3,6 @@
 
 2. "Logout" A new Logout button is placed in sidebar to logout the application.
 
-3. I think my UI design worths some bonus mark.
+3. primarily I really wanna add a new user photo database coloum, however we don't submit the backend. I only add a anonymous pic for every user. 
+
+4. I think my UI design worths some bonus mark.
