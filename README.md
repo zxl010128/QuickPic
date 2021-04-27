@@ -1,4 +1,4 @@
-# Assessment 2 - Vanilla JS: QuickPic
+# Vanilla JS: QuickPic
 
 1. Background & Motivation
 2. The Task (Frontend)
@@ -9,9 +9,9 @@
 7. Submission
 8. Late Submission Policy
 
-## 0. Change Log
+## 0. Intro
 
-Coming Soon
+This assignment project is implemented by Vanilla JS without any external library. Some of the screenshots will be shown below.
   
 ## 1. Background & Motivation
 
