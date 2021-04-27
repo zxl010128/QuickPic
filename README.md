@@ -12,6 +12,11 @@
 ## 0. Intro
 
 This assignment project is implemented by Vanilla JS without any external library. Some of the screenshots will be shown below.
+
+![ScreenShot](DesktopSize.jpg)
+![ScreenShot](MobileSize.jpg)
+
+Please note that any copying behaviors and inappropriate paraphrasing might cause misconduct or undermine academic integrity by your institution. All rights reserved by Xinlei Zhang.
   
 ## 1. Background & Motivation
 
